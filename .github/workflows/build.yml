@@ -26,7 +26,7 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
+      - name: build zip
         uses: montudor/action-zip@v1
         with:
           args: zip -qq -r Assets.zip ./
