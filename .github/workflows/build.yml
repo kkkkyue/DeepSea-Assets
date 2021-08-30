@@ -28,7 +28,7 @@ jobs:
       - name: build zip
         uses: montudor/action-zip@v1
         with:
-          args: zip -qq -r Assets.zip ./ -x ".git" ".github"
+          args: zip -qq -r Assets.zip ./ -x ".git/*" ".github/*"
       
       - name: Create Release
         run: |
