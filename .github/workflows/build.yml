@@ -37,6 +37,7 @@ jobs:
           for asset in ./*.zip; do
             assets+=("-a" "$asset")
           done
+          sudo apt-get install -y hub
           hub release delete "v1"
           hub release create "${assets[@]}"  -m "Release v1" "v1"
         env:
